@@ -3,62 +3,114 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>0306</title>
+<title>My Card</title>
+
 <style>
+
 body{
 margin:0;
-background:black;
+height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
-flex-direction:column;
-font-family:sans-serif;
+background:linear-gradient(135deg,#1c1c1e,#2c2c2e);
+font-family:-apple-system,BlinkMacSystemFont;
 }
-img{
+
+.card{
+
 width:90%;
-max-width:400px;
-border-radius:20px;
-}
-button{
-margin-top:25px;
-padding:18px 40px;
-font-size:20px;
-border:none;
-border-radius:15px;
-background:#ff2d55;
+max-width:380px;
+
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(20px);
+
+border-radius:30px;
+padding:20px;
+
+box-shadow:0 20px 40px rgba(0,0,0,0.5);
+
+text-align:center;
 color:white;
-cursor:pointer;
+
 }
+
+.photo{
+
+width:100%;
+border-radius:20px;
+
+}
+
+button{
+
+margin-top:20px;
+
+width:100%;
+
+padding:18px;
+
+border:none;
+
+border-radius:15px;
+
+font-size:18px;
+
+background:#0A84FF;
+
+color:white;
+
+}
+
 video{
+
 position:fixed;
+
 top:0;
 left:0;
+
 width:100%;
 height:100%;
+
 object-fit:cover;
+
 display:none;
+
 }
+
 </style>
 </head>
+
 <body>
 
-<img src="photo.jpg">
+<div class="card">
 
-<button onclick="playVideo()">영상 보기</button>
+<img src="IMG_0606.jpg" class="photo">
+
+<button onclick="playVideo()">영상 보기 🎬</button>
+
+</div>
 
 <video id="video" src="0306.mp4"></video>
 
 <script>
+
 function playVideo(){
+
 let v=document.getElementById("video");
+
 v.style.display="block";
+
 v.play();
+
 if(v.requestFullscreen){
 v.requestFullscreen();
 }
+
 }
+
 </script>
 
 </body>
+
 </html>
